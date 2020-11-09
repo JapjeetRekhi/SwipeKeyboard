@@ -84,7 +84,7 @@ SHARK2.canvasMouseUp = function (e) {
       dataType: "json",
 	  success: function(result) {
 	    console.log(result);
-	    $('#divInfo').html(result['best_word'] + ' ' + result['elapsed_time'])
+	    $('#divInfo').html(result['best_word'] + ' --recognized in-- ' + result['elapsed_time'])
 	  },
 	  error: function(result) {
 	  }

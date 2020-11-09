@@ -9,7 +9,7 @@ To do this, I have calculated the Start-to-Start distance and End-to-End distanc
 
 3) Shape Score: We first normalize all the valid template points and valid words. This is done using the get_scaled_points. As described in the paper, it calculates the scaling factor and then multiplies all the points with that factor to scale them down. L here is taken as 1, because I wante dto scale down the shape into a 1x1 cell. L is then divided by the largest side of the rectangle formed by the gesture. 
 
-4) Location Score: Location score is calculated using the given get_delta, get_big_d and get_small_d functions. I then calculated the alpha as described in the paper, creating a tunnel array as such -> [5,4,3,2,1,1,2,3,4,5] And then dividing them by the total sum so that the sum of the new alpha array is equal to 1.
+4) Location Score: Location score is calculated using the given get_delta, get_big_d and get_small_d functions. I then calculated the alpha,by creating a tunnel array as such -> [5,4,3,2,1,1,2,3,4,5] And then dividing them by the total sum so that the sum of the new alpha array is equal to 1.
 
 I didn't do 100 iterations of this as described in the paper. This is because small_d and big_D do not depend on the template. So one iteration is enough.
 
